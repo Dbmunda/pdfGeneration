@@ -22,7 +22,7 @@ app.post('/create-pdf',(req,res)=>{
         res.send(Promise.resolve());
     })
 })
-//Get  -Send the generated PDF to the client
+///////Get  -Send the generated PDF to the client
 app.get('/fetch-pdf',(req,res)=>{
     res.sendFile(`${__dirname}/result.pdf`)
 })

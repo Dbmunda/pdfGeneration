@@ -32,7 +32,7 @@ function App() {
       <input type="number" placeholder="Price 2" name="price2" onChange={handleChange} />
       <button onClick={createAndDownloadPdf}>
         Download PDf
-              </button>
+      </button>
     </div>
   );
 }
