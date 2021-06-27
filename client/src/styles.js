@@ -30,8 +30,5 @@ export default makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   
-  },
-  btn:{
-    marginTop:theme.spacing(4)
   }
 }));

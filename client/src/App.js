@@ -38,7 +38,7 @@ function App() {
         <Paper className={classes.paper}>
           <Typography variant="h4" gutterBottom>
             fill Details
-      </Typography>
+        </Typography>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -80,7 +80,8 @@ function App() {
               />
             </Grid>
           </Grid>
-          <Button className={classes.btn} variant="contained" color="primary" onClick={createAndDownloadPdf}>
+          <br/>
+          <Button variant="contained" color="primary" onClick={createAndDownloadPdf}>
             Download pdf
           </Button>
         </Paper>
