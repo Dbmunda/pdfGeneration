@@ -11,7 +11,7 @@ function App() {
   const classes = useStyles();
   const [userState, setUserState] = useState({
     name: '',
-    receiptID: 0,
+    receiptno: 0,
     price1: 0,
     price2: 0
   })
@@ -23,8 +23,8 @@ function App() {
     });
   }
   const createAndDownloadPdf = () => {
-    axios.post('/create-pdf', userState)
-      .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
+    axios.post('https://dbm-server.herokuapp.com/create-pdf', userState)
+      .then(() => axios.get('https://dbm-server.herokuapp.com/fetch-pdf', { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
@@ -53,8 +53,8 @@ function App() {
             <Grid item xs={12} sm={6}>
               <TextField
                 required
-                id=" receiptID"
-                name=" receiptID"
+                id="receiptno"
+                name="receiptno"
                 label=" receipt ID"
                 fullWidth
                 onChange={handleChange}
@@ -80,7 +80,7 @@ function App() {
               />
             </Grid>
           </Grid>
-          <br/>
+          <br />
           <Button variant="contained" color="primary" onClick={createAndDownloadPdf}>
             Download pdf
           </Button>
